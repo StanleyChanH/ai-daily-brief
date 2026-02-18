@@ -1,15 +1,11 @@
-# AI Daily Brief
+# ai-daily-brief
 
-每日AI资讯速递 - 整合全球AI科技动态与小红书热门资讯
+Live site: Coming soon
 
-## 数据来源
+## Development
 
-- Hacker News
-- 小红书
-- Towards Data Science
-- OpenAI
-- Anthropic
+Open `index.html` in your browser to preview locally.
 
-## 自动生成
+## Deployment
 
-由 OpenClaw 每日自动生成
+Automatically deployed to GitHub Pages on push to main branch.
