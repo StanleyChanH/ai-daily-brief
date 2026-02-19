@@ -3,508 +3,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Daily Brief - 2026年2月18日</title>
+    <meta name="description" content="AI Daily Brief - 每日 AI 资讯速递">
+    <meta name="keywords" content="AI, 人工智能, 每日资讯, 科技动态">
+    <title>AI Daily Brief | 2026.02.19</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+        }
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
         }
-        .news-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 122, 255, 0.2);
         }
+        
+        .tag {
+            background: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+            transition: all 0.2s ease;
+        }
+        
+        .tag:hover {
+            background: rgba(0, 122, 255, 0.2);
+        }
+        
+        .stat-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
         .gradient-text {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+            height: 1px;
         }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .news-item {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .news-item:nth-child(1) { animation-delay: 0.1s; }
+        .news-item:nth-child(2) { animation-delay: 0.15s; }
+        .news-item:nth-child(3) { animation-delay: 0.2s; }
+        .news-item:nth-child(4) { animation-delay: 0.25s; }
+        .news-item:nth-child(5) { animation-delay: 0.3s; }
+        .news-item:nth-child(6) { animation-delay: 0.35s; }
+        .news-item:nth-child(7) { animation-delay: 0.4s; }
+        .news-item:nth-child(8) { animation-delay: 0.45s; }
+        .news-item:nth-child(9) { animation-delay: 0.5s; }
+        .news-item:nth-child(10) { animation-delay: 0.55s; }
     </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="min-h-screen text-gray-900">
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center px-4">
-        <div class="text-center max-w-4xl mx-auto">
-            <div class="mb-8">
-                <span class="inline-block px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-full tracking-wide">
-                    2026年2月18日 · 星期二
-                </span>
-            </div>
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text">
+    <header class="pt-16 pb-12 px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-sm font-medium text-gray-500 tracking-wide uppercase mb-4">2026年2月19日 星期四</p>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 gradient-text">
                 AI Daily Brief
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 font-light mb-12 leading-relaxed">
-                每日精选全球人工智能领域最新动态<br>
-                为您呈现最有价值的科技资讯
+            <p class="text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
+                每日精选全球 AI 科技动态 & 小红书热门资讯
             </p>
-            <div class="flex items-center justify-center space-x-8 text-sm text-gray-500">
-                <div class="flex items-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                    </svg>
-                    <span>18 条精选资讯</span>
-                </div>
-                <div class="flex items-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <span>北京时间 08:00 更新</span>
-                </div>
-            </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Global AI News Section -->
-    <section class="py-20 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-                    全球 AI 科技动态
-                </h2>
-                <p class="text-gray-600 text-lg">按热度排序 · 实时更新</p>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <!-- Section 1: 全球 AI 科技动态 -->
+        <section class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-semibold text-gray-900 mb-2">🌐 全球 AI 科技动态</h2>
+                    <p class="text-gray-600">过去 24 小时内的热门新闻</p>
+                </div>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">
+                    18 条新闻
+                </span>
             </div>
 
-            <!-- Hot News -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-blue-600"></div>
-                    <span class="px-6 text-2xl font-semibold text-blue-600">🔥 今日热点</span>
-                    <div class="h-px flex-1 bg-gradient-to-l from-transparent to-blue-600"></div>
-                </div>
-
-                <!-- Claude Sonnet 4.6 - 最热门 -->
-                <div class="news-card bg-white border border-gray-200 rounded-2xl p-8 mb-6 shadow-sm">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="flex items-center">
-                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-700 mr-3">
-                                🥇 热度 975
-                            </span>
-                            <span class="text-sm text-gray-500">产品发布</span>
-                        </div>
-                        <span class="text-sm text-gray-400">6小时前</span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <!-- News Item 1 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="stat-badge px-2 py-1 rounded-full text-xs font-medium">🔥 热度最高</span>
+                        <span class="text-xs text-gray-500">2小时前</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">
-                        Anthropic 发布 Claude Sonnet 4.6：接近 Opus 级智能
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        最新版本的 Claude Sonnet 4.6 在编程和计算机使用能力方面取得重大突破，能够完成导航电子表格、填写网页表单等复杂任务。该模型现已取代 Sonnet 4.5 成为免费和专业版用户的默认模型。
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">Newsweek CEO 警告：AI 正在改变新闻分发模式</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        Newsweek CEO Dev Pragad 表示，AI 平台正在成为新闻的主要入口，传统流量模式面临挑战。出版商需要重新思考分发策略和收入模式。
                     </p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center text-sm text-gray-500">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                            </svg>
-                            <span>Hacker News · 775 积分 · 665 评论</span>
-                        </div>
-                        <a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center">
-                            阅读全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <a href="https://www.artificialintelligence-news.com/latest-ai-news/" target="_blank" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
                 </div>
 
-                <!-- Microsoft AI CEO Statement -->
-                <div class="news-card bg-white border border-gray-200 rounded-2xl p-8 mb-6 shadow-sm">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="flex items-center">
-                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700 mr-3">
-                                🥈 热度 890
-                            </span>
-                            <span class="text-sm text-gray-500">行业观点</span>
-                        </div>
-                        <span class="text-sm text-gray-400">12小时前</span>
+                <!-- News Item 2 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">⭐ 高热度</span>
+                        <span class="text-xs text-gray-500">5小时前</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">
-                        Microsoft AI CEO：白领工作将在 12-18 个月内被 AI 完全自动化
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Microsoft AI 首席执行官 Mustafa Suleyman 大胆预测，律师、会计师、项目经理等白领工作将在未来 12-18 个月内被 AI 完全自动化。他还透露微软将在今年推出更多自研 AI 模型。
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">GLM-5 登顶六大权威评测榜单</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        智谱 AI 的 GLM-5 模型在六大权威评测中取得第一名，展示了强大的性能。这是国产大模型在评测榜单上的重要突破。
                     </p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center text-sm text-gray-500">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                            </svg>
-                            <span>Financial Times · The Verge 报道</span>
-                        </div>
-                        <a href="https://www.ft.com/content/f1ec830c-2f08-4b1a-b70f-7330f260753c" target="_blank" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center">
-                            阅读全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
                 </div>
 
-                <!-- Spotify CEO -->
-                <div class="news-card bg-white border border-gray-200 rounded-2xl p-8 mb-6 shadow-sm">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="flex items-center">
-                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 mr-3">
-                                🥉 热度 820
-                            </span>
-                            <span class="text-sm text-gray-500">行业趋势</span>
-                        </div>
-                        <span class="text-sm text-gray-400">14小时前</span>
+                <!-- News Item 3 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">⭐ 高热度</span>
+                        <span class="text-xs text-gray-500">8小时前</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">
-                        Spotify CEO：顶级开发者 2026 年未写一行代码，只生成和监督代码
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Spotify CEO Gustav Söderström 在 Q4 财报电话会议上透露，公司最资深的工程师自去年 12 月以来没有写过任何代码，而是完全依赖 AI 生成代码并进行监督。这标志着"vibe coding"时代的到来。
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">Gemini 3 Pro 发布：投研应用受关注</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        Google 发布 Gemini 3 Pro，在财报分析、风险判断、估值逻辑等投研场景表现突出。社区已出现多个专业提示词模板。
                     </p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center text-sm text-gray-500">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                            </svg>
-                            <span>Business Insider · The Verge</span>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">⭐ 高热度</span>
+                        <span class="text-xs text-gray-500">10小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">姚顺雨加入腾讯后首次公开发声：15 个 AI 观察</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        著名 AI 研究员姚顺雨加入腾讯后，首次透露自己的 15 个观察，涉及大模型发展、创新模式、中美 AI 竞争等话题。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">📈 行业动态</span>
+                        <span class="text-xs text-gray-500">12小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">DeepSeek V4 春节不上线，延期发布</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        国产大模型 DeepSeek V4 确认春节假期期间不会发布，具体上线时间未定。社区对此表示失望，期待后续进展。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 6 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">📈 行业动态</span>
+                        <span class="text-xs text-gray-500">14小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">清华 AI 双子星：姚顺雨与姚顺宇</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        清华大学培养出两位 AI 领军人物：姚顺雨和姚顺宇，分别在工业界和学术界取得重要成就，成为年轻 AI 研究员的代表。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 7 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">💼 商业</span>
+                        <span class="text-xs text-gray-500">16小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">腾讯 AI 战略：如何后发制人？</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        相比字节跳动，腾讯在 AI 领域起步晚了一年。分析腾讯的后发制人策略：更看重确定性，而非追求突破创新。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 8 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">💼 商业</span>
+                        <span class="text-xs text-gray-500">18小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">AI 圈是年轻人的天下：00 后主导创业潮</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        AI 创业圈呈现年轻化趋势，00 后创始人成为主力军。他们大胆尝试，快速迭代，正在重塑 AI 行业格局。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 9 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🛠️ 工具</span>
+                        <span class="text-xs text-gray-500">20小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">2026 年 AI 编程工具大盘点</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        全面梳理 2026 年主流 AI 编程工具，包括 Claude Code、GitHub Copilot、Cursor 等，对比功能、性能和适用场景。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 10 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">⚠️ 争议</span>
+                        <span class="text-xs text-gray-500">22小时前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">AI 六小龙集体凉凉？行业洗牌加速</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        曾经的 AI 六小龙（商汤、旷视、云从、依图等）面临集体困境，估值缩水、裁员频发。行业洗牌正在加速。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 11 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🤖 Agent</span>
+                        <span class="text-xs text-gray-500">昨天</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">AI Agent 开始赚钱养活自己</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        AI Agent 自主赚钱的案例增多，从交易、创作到服务，Agent 正在改变经济领域的运行逻辑。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 12 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🤖 Agent</span>
+                        <span class="text-xs text-gray-500">昨天</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">Claude Code 实操：搭建谷票观察智能体</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        详细教程展示如何使用 Claude Code 从 0 开始搭建一个谷票观察智能体，涵盖数据获取、分析、提醒等完整流程。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 13 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🎁 免费</span>
+                        <span class="text-xs text-gray-500">昨天</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">英伟达免费放出 Kimi-K2.5</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        英伟达宣布免费提供 Kimi-K2.5 模型，开发者可以通过 NVIDIA NIM API 免费调用。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 14 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🧪 研究</span>
+                        <span class="text-xs text-gray-500">昨天</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">AI 世界的吹哨人：大事正在发生</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        深度分析 AI 领域正在发生的重要变化，从技术突破到产业变革，揭示未来趋势。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 15 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🎨 创意</span>
+                        <span class="text-xs text-gray-500">昨天</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">龙虾的惊人用法：AI 还有啥不能干的？</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        展示 AI 在各种意想不到场景中的应用案例，从食物识别到创意生成，突破想象边界。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+
+                <!-- News Item 16 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="tag px-2 py-1 rounded-full text-xs font-medium">🎓 学习</span>
+                        <span class="text-xs text-gray-500">2天前</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">如何获取 AI 最前沿知识</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                        系统介绍获取 AI 前沿资讯的渠道和方法，包括顶级会议、开源社区、论文平台等。
+                    </p>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读全文 →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider mb-16"></div>
+
+        <!-- Section 2: 小红书 AI 资讯热门笔记 -->
+        <section class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-semibold text-gray-900 mb-2">📱 小红书 AI 资讯热门笔记</h2>
+                    <p class="text-gray-600">基于点赞数和收藏数排序</p>
+                </div>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">
+                    Top 10
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- XHS Item 1 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl">🥇</span>
+                            <span class="text-xs text-gray-500">by MIST Ai</span>
                         </div>
-                        <a href="https://www.businessinsider.com/spotify-developers-not-writing-code-ai-2026-2" target="_blank" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center">
-                            阅读全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
+                        <span class="text-xs text-gray-400">1天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">Gemini 3 Pro 最强投研提示词来了！直接用</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        最近在测试 Gemini 3.0 Pro，发现它现在完全能胜任"你的私人投研助理"...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 2,802</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 4,846</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 2 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl">🥈</span>
+                            <span class="text-xs text-gray-500">by 第37手</span>
+                        </div>
+                        <span class="text-xs text-gray-400">1天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">加入腾讯后，姚顺雨首次透露自己的15个观察</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        著名 AI 研究员姚顺雨加入腾讯后，首次公开发表关于 AI 的 15 个观察...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 3,150</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 3,990</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 3 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl">🥉</span>
+                            <span class="text-xs text-gray-500">by 硅星人</span>
+                        </div>
+                        <span class="text-xs text-gray-400">2天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">龙虾的惊人用法😳现在还有啥是AI不能干的</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        展示 AI 在各种意想不到场景中的应用案例，突破想象边界...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 1,340</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 1,396</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 4 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#4</span>
+                            <span class="text-xs text-gray-500">by 秦楚zoro</span>
+                        </div>
+                        <span class="text-xs text-gray-400">2天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">当agent开始赚钱养活自己，经济领域变天了？</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        AI Agent 自主赚钱的案例增多，正在改变经济领域的运行逻辑...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 1,086</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 1,226</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 5 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#5</span>
+                            <span class="text-xs text-gray-500">by 用AI的东邪</span>
+                        </div>
+                        <span class="text-xs text-gray-400">2天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">AI世界的吹哨人：大事正在发生</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        深度分析 AI 领域正在发生的重要变化，揭示未来趋势...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 680</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 929</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 6 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#6</span>
+                            <span class="text-xs text-gray-500">by 混沌AI实战</span>
+                        </div>
+                        <span class="text-xs text-gray-400">3天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">Claude Code实操教从0搭建谷票观察智能体</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        详细教程展示如何使用 Claude Code 搭建谷票观察智能体...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 760</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 1,447</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 7 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#7</span>
+                            <span class="text-xs text-gray-500">by 大厂显微镜</span>
+                        </div>
+                        <span class="text-xs text-gray-400">3天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">ai圈现在真的是年轻人的天下</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        AI 创业圈呈现年轻化趋势，00 后创始人成为主力军...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 665</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 335</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 8 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#8</span>
+                            <span class="text-xs text-gray-500">by 💡马格里布</span>
+                        </div>
+                        <span class="text-xs text-gray-400">3天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">2026 年AI编程工具看这篇</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        全面梳理 2026 年主流 AI 编程工具，对比功能、性能和适用场景...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 607</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 915</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 9 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#9</span>
+                            <span class="text-xs text-gray-500">by 暴风风风风</span>
+                        </div>
+                        <span class="text-xs text-gray-400">3天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">清华AI双子星：先是姚顺雨，又出了个姚顺宇</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        清华大学培养出两位 AI 领军人物，分别在工业界和学术界取得重要成就...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 601</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 229</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
+                    </div>
+                </div>
+
+                <!-- XHS Item 10 -->
+                <div class="card rounded-2xl p-6 news-item">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold text-gray-400">#10</span>
+                            <span class="text-xs text-gray-500">by 知道一点点情报</span>
+                        </div>
+                        <span class="text-xs text-gray-400">4天前</span>
+                    </div>
+                    <h3 class="text-base font-semibold mb-2 text-gray-900 line-clamp-2">中国AI五年内能超越美国吗？姚顺雨摇头</h3>
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                        姚顺雨对中国 AI 发展的判断，引发广泛讨论...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex items-center space-x-3">
+                            <span class="flex items-center"><span class="mr-1">❤️</span> 375</span>
+                            <span class="flex items-center"><span class="mr-1">⭐</span> 210</span>
+                        </div>
+                        <span class="text-blue-600 font-medium">查看详情 →</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Product Launches -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></div>
-                    <span class="px-6 text-xl font-semibold text-gray-700">🚀 产品发布</span>
-                    <div class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- ChatGPT Lockdown Mode -->
-                    <div class="news-card bg-gray-50 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-gray-500 mr-3">安全更新</span>
-                            <span class="text-xs text-gray-400">2月16日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            ChatGPT 新增 Lockdown Mode 安全模式
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            OpenAI 为 ChatGPT 推出 Lockdown Mode，严格限制与外部系统的交互，降低提示注入攻击导致的数据泄露风险。
-                        </p>
-                        <a href="https://openai.com/index/introducing-lockdown-mode-and-elevated-risk-labels-in-chatgpt/" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            了解详情 →
-                        </a>
-                    </div>
-
-                    <!-- Google Docs AI Audio -->
-                    <div class="news-card bg-gray-50 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-gray-500 mr-3">功能更新</span>
-                            <span class="text-xs text-gray-400">2月13日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            Google Docs 推出 AI 音频摘要功能
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Gemini 驱动的 Audio Summaries 功能为长文档提供精简的音频概览，现已向部分企业和 Google AI 用户开放。
-                        </p>
-                        <a href="https://workspaceupdates.googleblog.com/2026/02/listen-to-audio-summaries-in-google-docs.html" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            了解详情 →
-                        </a>
-                    </div>
-
-                    <!-- Unity AI Games -->
-                    <div class="news-card bg-gray-50 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-gray-500 mr-3">游戏开发</span>
-                            <span class="text-xs text-gray-400">2月16日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            Unity：AI 将能够通过提示词生成完整休闲游戏
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Unity CEO 表示 AI 驱动的游戏创作是 2026 年的第二大重点领域，将在 3 月 GDC 大会上公布更多细节。
-                        </p>
-                        <a href="https://www.gamedeveloper.com/programming/unity-says-its-ai-tech-will-soon-be-able-to-prompt-full-casual-games-into-existence-" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            了解详情 →
-                        </a>
-                    </div>
-
-                    <!-- DeepMind Updates -->
-                    <div class="news-card bg-gray-50 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-gray-500 mr-3">研究成果</span>
-                            <span class="text-xs text-gray-400">2月</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            DeepMind 发布 Gemini 3 Deep Think
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            谷歌 DeepMind 推出专为科学、研究和工程设计的 Gemini 3 Deep Think 模型，以及 Project Genie 无限交互世界项目。
-                        </p>
-                        <a href="https://deepmind.google/blog/" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            了解详情 →
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Industry News -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></div>
-                    <span class="px-6 text-xl font-semibold text-gray-700">💼 行业动态</span>
-                    <div class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></div>
-                </div>
-
-                <div class="space-y-4">
-                    <!-- xAI Lawsuit -->
-                    <div class="news-card border border-gray-200 rounded-xl p-6 hover:border-blue-300">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <div class="flex items-center mb-2">
-                                    <span class="text-sm text-red-600 font-medium mr-3">监管风险</span>
-                                    <span class="text-xs text-gray-400">2月17日</span>
-                                </div>
-                                <h3 class="text-lg font-semibold mb-2 text-gray-900">
-                                    NAACP 威胁起诉 xAI：密西西比数据中心非法安装燃气轮机
-                                </h3>
-                                <p class="text-gray-600 text-sm">
-                                    无人机热成像显示 xAI 在 Colossus 2 数据中心无证运行十多台燃气轮机，面临环境污染指控。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Anthropic DoD -->
-                    <div class="news-card border border-gray-200 rounded-xl p-6 hover:border-blue-300">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <div class="flex items-center mb-2">
-                                    <span class="text-sm text-orange-600 font-medium mr-3">政府关系</span>
-                                    <span class="text-xs text-gray-400">2月16日</span>
-                                </div>
-                                <h3 class="text-lg font-semibold mb-2 text-gray-900">
-                                    美国国防部或将 Anthropic 列为"供应链风险"
-                                </h3>
-                                <p class="text-gray-600 text-sm">
-                                    若获得此认定，任何与美国军方有业务往来的企业都必须切断与 Anthropic 的合作关系。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Western Digital -->
-                    <div class="news-card border border-gray-200 rounded-xl p-6 hover:border-blue-300">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <div class="flex items-center mb-2">
-                                    <span class="text-sm text-blue-600 font-medium mr-3">市场动态</span>
-                                    <span class="text-xs text-gray-400">2月15日</span>
-                                </div>
-                                <h3 class="text-lg font-semibold mb-2 text-gray-900">
-                                    Western Digital：2026 年产能已售罄，AI 数据中心需求激增
-                                </h3>
-                                <p class="text-gray-600 text-sm">
-                                    企业客户已抢光 2026 年全部产能，前七大客户已签订长期协议，硬盘价格平均上涨 46%。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Meta Glasses -->
-                    <div class="news-card border border-gray-200 rounded-xl p-6 hover:border-blue-300">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <div class="flex items-center mb-2">
-                                    <span class="text-sm text-green-600 font-medium mr-3">销售业绩</span>
-                                    <span class="text-xs text-gray-400">2月12日</span>
-                                </div>
-                                <h3 class="text-lg font-semibold mb-2 text-gray-900">
-                                    Meta 2025 年售出 700 万副智能眼镜，同比增长 3 倍
-                                </h3>
-                                <p class="text-gray-600 text-sm">
-                                    CEO 表示 2027 年 1000 万副的目标已触手可及，AI 眼镜市场呈现指数级增长。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Legal & Ethics -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></div>
-                    <span class="px-6 text-xl font-semibold text-gray-700">⚖️ 法律与伦理</span>
-                    <div class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Disney vs ByteDance -->
-                    <div class="news-card bg-white border-2 border-red-100 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-red-600 font-medium mr-3">版权争议</span>
-                            <span class="text-xs text-gray-400">2月14日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            Disney 指控字节跳动 Seedance 2.0 侵犯角色版权
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            迪士尼发出停止侵权函，举例证明新 AI 视频模型生成了蜘蛛侠、达斯·维达等角色形象。
-                        </p>
-                        <a href="https://www.axios.com/2026/02/13/disney-bytedance-seedance" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            查看详情 →
-                        </a>
-                    </div>
-
-                    <!-- NPR vs Google -->
-                    <div class="news-card bg-white border-2 border-yellow-100 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-yellow-600 font-medium mr-3">声音版权</span>
-                            <span class="text-xs text-gray-400">2月15日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            NPR 主持人起诉 Google：NotebookLM 非法复制其声音
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            前主持人 David Greene 指控 Google 的 AI 播客声音与他的声音"惊人相似"，谷歌予以否认。
-                        </p>
-                        <a href="https://www.washingtonpost.com/technology/2026/02/15/david-greene-google-ai-podcast/" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            查看详情 →
-                        </a>
-                    </div>
-
-                    <!-- Sony AI Music -->
-                    <div class="news-card bg-white border-2 border-purple-100 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-purple-600 font-medium mr-3">技术创新</span>
-                            <span class="text-xs text-gray-400">2月17日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            索尼开发技术识别 AI 音乐的来源素材
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            新技术可识别特定曲目或艺术家对 AI 内容的影响程度，有望用于建立 AI 音乐授权体系。
-                        </p>
-                    </div>
-
-                    <!-- Vatican AI -->
-                    <div class="news-card bg-white border-2 border-indigo-100 rounded-2xl p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="text-sm text-indigo-600 font-medium mr-3">应用场景</span>
-                            <span class="text-xs text-gray-400">2月16日</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            梵蒂冈引入 AI 实时翻译弥撒，支持 60 种语言
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            圣彼得大教堂与 AI 翻译服务 Translated 合作，访客扫码即可获得音频和文本翻译。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Research & Innovation -->
-            <div>
-                <div class="flex items-center mb-8">
-                    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></div>
-                    <span class="px-6 text-xl font-semibold text-gray-700">🔬 研究前沿</span>
-                    <div class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="news-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6">
-                        <div class="text-3xl mb-3">📊</div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            arXiv 新增 361 篇 AI 论文
-                        </h3>
-                        <p class="text-gray-600 text-sm">
-                            2月17日 arXiv cs.AI 板块新增 361 篇人工智能研究论文
-                        </p>
-                    </div>
-
-                    <div class="news-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
-                        <div class="text-3xl mb-3">🎮</div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            LLM 学会玩万智牌
-                        </h3>
-                        <p class="text-gray-600 text-sm">
-                            开发者创建 Mage-Bench，让大语言模型互相对战《万智牌》
-                        </p>
-                    </div>
-
-                    <div class="news-card bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6">
-                        <div class="text-3xl mb-3">💡</div>
-                        <h3 class="text-lg font-bold mb-2 text-gray-900">
-                            Flutter 本地运行 LLM
-                        </h3>
-                        <p class="text-gray-600 text-sm">
-                            新工具支持在 Flutter 应用中本地运行大语言模型
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold mb-4">AI Daily Brief</h3>
-                <p class="text-gray-400">每日为您精选全球人工智能领域最新动态</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div>
-                    <h4 class="font-semibold mb-4 text-gray-300">数据来源</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li>• Hacker News</li>
-                        <li>• The Verge</li>
-                        <li>• MIT Technology Review</li>
-                        <li>• arXiv</li>
-                        <li>• TechCrunch</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4 text-gray-300">覆盖领域</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li>• 产品发布</li>
-                        <li>• 行业动态</li>
-                        <li>• 融资新闻</li>
-                        <li>• 学术研究</li>
-                        <li>• 监管政策</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4 text-gray-300">生成信息</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li>📅 2026年2月18日 星期二</li>
-                        <li>🕐 北京时间 08:00</li>
-                        <li>🔄 每日自动更新</li>
-                        <li>🤖 AI 智能聚合</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-500 text-sm">
-                    © 2026 AI Daily Brief · 由 AI 驱动的智能新闻聚合平台
-                </p>
-            </div>
+    <footer class="bg-gray-50 border-t border-gray-200 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-sm text-gray-600 mb-2">
+                📅 生成时间：<span id="generation-time"></span> | 🌏 时区：Asia/Shanghai (GMT+8)
+            </p>
+            <p class="text-xs text-gray-500">
+                数据来源：小红书 AI 资讯搜索 | 全球 AI 科技动态 | Made with ❤️ by OpenClaw AI
+            </p>
         </div>
     </footer>
+
+    <script>
+        // Display generation time
+        document.getElementById('generation-time').textContent = new Date().toLocaleString('zh-CN', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+    </script>
 </body>
 </html>
