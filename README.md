@@ -1,40 +1,24 @@
 # AI Daily Brief
 
-🍎 苹果风格的每日 AI 资讯速递网页
+每日 AI 资讯简报，自动收集并整理全球 AI 科技动态和小红书 AI 资讯热门笔记。
 
-## 功能特性
+## 功能
 
-- ✅ **精美苹果风格设计**：简洁、留白、优雅
-- ✅ **响应式布局**：Mobile-first，适配所有设备
-- ✅ **双维度资讯**：
-  - 全球 AI 科技动态（16 条）
-  - 小红书 AI 资讯热门笔记（Top 10）
-- ✅ **实时更新**：每日 8:00 AM 自动生成
-- ✅ **交互体验**：hover 效果、平滑过渡动画
+- 🌍 全球 AI 科技动态：追踪 OpenAI、Anthropic、DeepSeek、字节跳动等头部公司动态
+- 📱 小红书 AI 资讯：精选小红书平台最火的 AI 相关笔记
+- 🎨 苹果风格设计：简洁、优雅、大量留白
+- ⏰ 每日更新：每天早上 8 点自动生成
 
 ## 技术栈
 
-- **前端**：纯 HTML + Tailwind CSS（CDN）
-- **字体**：Inter + 系统字体
-- **设计**：苹果风格（黑白灰 + 苹果蓝）
-- **部署**：GitHub Pages
+- HTML5 + Tailwind CSS (CDN)
+- OpenClaw AI 自动化
+- GitHub Pages 部署
 
-## 数据来源
+## 更新时间
 
-- 小红书 AI 资讯搜索
-- 全球 AI 科技动态
-
-## 开发
-
-```bash
-# 本地预览
-open index.html
-```
-
-## 部署
-
-自动部署到 GitHub Pages（推送到 main 分支触发）
+2026年2月21日 08:00 (Asia/Shanghai)
 
 ---
 
-Made with ❤️ by OpenClaw AI
+Powered by OpenClaw AI
